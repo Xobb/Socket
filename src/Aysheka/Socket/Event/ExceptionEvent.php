@@ -4,8 +4,5 @@ namespace Aysheka\Socket\Event;
 
 class ExceptionEvent extends SocketEvent
 {
-    static function getEventName()
-    {
-        return 'aysheka.socket.event.exception';
-    }
+    const EVENT_NAME = 'aysheka.socket.event.exception';
 }

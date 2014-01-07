@@ -5,7 +5,7 @@ use Aysheka\Socket\Event\SocketEvent;
 use Aysheka\Socket\Server;
 use Aysheka\Socket\Socket;
 
-abstract class ServerEvent extends SocketEvent
+class ServerEvent extends SocketEvent
 {
     protected $server;
 

@@ -5,8 +5,9 @@ use Symfony\Component\EventDispatcher\Event;
 use Aysheka\Socket\Socket;
 
 
-abstract class SocketEvent extends Event
+class SocketEvent extends Event
 {
+    const EVENT_NAME = 'socket.event';
     protected $socket;
     protected $data;
 
@@ -26,5 +27,8 @@ abstract class SocketEvent extends Event
         return $this->data;
     }
 
-    abstract static function getEventName();
+    public static function getEventName()
+    {
+        return self::EVENT_NAME;
+    }
 }
